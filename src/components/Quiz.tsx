@@ -25,7 +25,7 @@ export const Quiz: React.FC = () => {
     if (questions.length === 0) {
         return <>
             <p>No quiz loaded</p>
-            <button onClick={handleNewQuiz}>Start New Quiz</button>
+            <SubmitButton onClick={handleNewQuiz}>Start New Quiz</SubmitButton>
         </>
     }
 
