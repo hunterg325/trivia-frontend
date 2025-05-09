@@ -119,5 +119,3 @@ export const store = configureStore({
         quiz: quizSlice.reducer,
     },
 });
-
-export type AppDispatch = typeof store.dispatch;

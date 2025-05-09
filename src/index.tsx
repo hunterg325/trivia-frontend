@@ -5,6 +5,8 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { store } from './store';
 import reportWebVitals from './reportWebVitals';
+import '@fontsource/roboto/400.css';
+import {PageContainer} from "./common/common";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,7 +14,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
       <Provider store={store}>
-          <App />
+          <PageContainer>
+              <App />
+          </PageContainer>
       </Provider>
   </React.StrictMode>
 );
