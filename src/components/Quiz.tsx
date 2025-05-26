@@ -2,11 +2,11 @@ import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router";
 import {QuizState} from "../types";
-import {resetQuiz, selectAnswer, submitQuiz} from "../store";
-import {FlexContainer, AnswerButton, HiddenInput, SubmitButton} from "../common/common";
+import {AppDispatch, resetQuiz, selectAnswer, submitQuiz} from "../store";
+import {FlexContainer, AnswerButton, HiddenInput, SubmitButton} from "../common/styles";
 
 export const Quiz: React.FC = () => {
-    const dispatch = useDispatch<any>();
+    const dispatch = useDispatch<AppDispatch>();
     const history = useNavigate();
     const { questions, status } = useSelector((state: { quiz: QuizState }) => state.quiz);
     const allAnswered = questions.every((q) => q.selectedAnswer);
@@ -28,8 +28,6 @@ export const Quiz: React.FC = () => {
             <SubmitButton onClick={handleNewQuiz}>Start New Quiz</SubmitButton>
         </>
     }
-
-    console.log('ALL_ANSWERED', questions);
 
     return (
         <div>

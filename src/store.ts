@@ -94,7 +94,7 @@ export const fetchCategories = createAsyncThunk('quiz/fetchCategories', async ()
     return response.data;
 });
 
-export const startQuiz = createAsyncThunk('quiz/startQuiz', async (_, { getState }) => {
+export const startQuiz  = createAsyncThunk('quiz/startQuiz', async (_, { getState }) => {
     const state = getState() as { quiz: QuizState };
     const { selectedCategory, selectedDifficulty } = state.quiz;
     const response = await axios.get<FrontendQuestion[]>(
@@ -119,3 +119,5 @@ export const store = configureStore({
         quiz: quizSlice.reducer,
     },
 });
+
+export type AppDispatch = typeof store.dispatch;

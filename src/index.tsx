@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import reportWebVitals from './reportWebVitals';
 import '@fontsource/roboto/400.css';
-import {PageContainer} from "./common/common";
+import {PageContainer} from "./common/styles";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

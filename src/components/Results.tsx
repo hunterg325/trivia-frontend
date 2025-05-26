@@ -2,12 +2,12 @@ import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router";
 
-import {resetQuiz} from "../store";
+import {AppDispatch, resetQuiz} from "../store";
 import {QuizState} from "../types";
-import {AnswerButton, FlexContainer, ScoreBar, SubmitButton} from "../common/common";
+import {AnswerButton, FlexContainer, ScoreBar, SubmitButton} from "../common/styles";
 
 export const Results: React.FC = () => {
-    const dispatch = useDispatch<any>();
+    const dispatch = useDispatch<AppDispatch>();
     const history = useNavigate();
     const { questions, score, status } = useSelector((state: { quiz: QuizState }) => state.quiz);
 

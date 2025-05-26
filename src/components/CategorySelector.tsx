@@ -2,11 +2,11 @@ import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router";
 import {QuizState} from "../types";
-import {fetchCategories, setSelectedCategory, setSelectedDifficulty, startQuiz} from "../store";
-import {CategoryContainer, StyledSelect, SubmitButton} from "../common/common";
+import {AppDispatch, fetchCategories, setSelectedCategory, setSelectedDifficulty, startQuiz} from "../store";
+import {CategoryContainer, StyledSelect, SubmitButton} from "../common/styles";
 
 export const CategorySelector: React.FC = () => {
-    const dispatch = useDispatch<any>();
+    const dispatch = useDispatch<AppDispatch>();
     const history = useNavigate();
     const { categories, selectedCategory, selectedDifficulty, status } = useSelector((state: { quiz: QuizState }) => state.quiz);
 
