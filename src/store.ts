@@ -1,5 +1,6 @@
 import { configureStore, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+
 import { QuizState, FrontendCategory, FrontendQuestion } from './types';
 
 const initialState: QuizState = {

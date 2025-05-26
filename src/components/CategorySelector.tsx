@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router";
+
 import {QuizState} from "../types";
 import {AppDispatch, fetchCategories, setSelectedCategory, setSelectedDifficulty, startQuiz} from "../store";
 import {CategoryContainer, StyledSelect, SubmitButton} from "../common/styles";
