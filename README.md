@@ -14,7 +14,7 @@ A fullstack web application that allows users to play a trivia quiz. Users can s
 ### Backend
 
 - **Node.js**: Runtime environment.
-- **Express**: Web framework for building the API.
+- **Express**: Node.js HTTP Framework to build the API.
 - **MongoDB (with Mongoose)**: Database for storing categories and questions.
 - **Axios**: For fetching data from the OpenTDB API during database seeding.
 - [Backend source lives in a separate repository](https://github.com/hunterg325/trivia-quiz-backend)
@@ -26,36 +26,6 @@ A fullstack web application that allows users to play a trivia quiz. Users can s
 - **Node.js** (version 14 or higher)
 - **MongoDB** (local installation or MongoDB Atlas)
 - **npm** or **yarn**
-
-### Backend Setup
-
-1. Navigate to the backend directory:
-
-   ```bash
-   cd backend
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-3. Ensure MongoDB is running locally or update the connection string in `server.js` if using MongoDB Atlas.
-
-4. Run the seeding script to populate the database with categories and questions:
-
-   ```bash
-   node seed.js
-   ```
-
-5. Start the backend server:
-
-   ```bash
-   node server.js
-   ```
-
-### Frontend Setup
 
 1. Navigate to the frontend directory:
 
@@ -92,8 +62,10 @@ A fullstack web application that allows users to play a trivia quiz. Users can s
 - **frontend/**
 
     - `src/`
+        - `common/`: Styled components reused throughout application.
         - `components/`: React components (e.g., `CategorySelector.tsx`, `Quiz.tsx`, `Results.tsx`).
-        - `store.js`: Redux store configuration.
+        - `store.ts`: Redux store configuration.
+        - `store.ts`: Type definitions expected from API
         - `App.tsx`: Main App component with routing and Redux provider.
         - `index.tsx`: Entry point for the React application.
 
